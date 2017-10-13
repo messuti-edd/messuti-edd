@@ -1,0 +1,48 @@
+---
+layout: default
+---
+<article class="project" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="project-header">
+    <h1 class="project-title" itemprop="name headline">{{ page.title | escape }}</h1>
+
+    <div class="project-content" itemprop="articleBody">
+      {{ content }}
+    </div>
+
+    <div class="project-images">
+      <img src="{{ page.images | first }}" class="main-image">
+      <div class="images-previews">
+        {% for img in page.images %}
+          <a href="#"><img src="{{ img }}"></a>
+        {% endfor %}
+      </div>
+    </div>
+  </header>
+
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+</article>
+
+<script type="text/javascript">
+  var mainImg, previews;
+
+  function onImgPreviewClick(evt) {
+    evt.preventDefault();
+    mainImg.src = evt.target.src;
+    for (var i = 0; i < previews.length; i++) {
+      previews[i].classList.remove('active');
+    }
+    evt.currentTarget.classList.add('active');
+  }
+
+  window.onload = function() {
+    previews = document.querySelectorAll('.images-previews a');
+    mainImg = document.querySelector('.main-image');
+
+    for (var i = 0; i < previews.length; i++) {
+      previews[i].addEventListener('click', onImgPreviewClick, false);
+    }
+  }
+</script>

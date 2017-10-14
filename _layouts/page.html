@@ -5,8 +5,17 @@
 
   <body class="portfolio">
 
-    <div class="container container_wide portfolio_site">
-      {% include landing_header.html %}
+    <div class="container portfolio_site_item">
+      {% include page_header.html %}
+
+      <hr>
+      <div class="item_title">
+        <h1>{{ page.title }}</h1>
+        <a class="go_back" href="javascript:history.back()">〈 Back</a>
+      </div>
+      <hr>
+      <br>
+      <br>
 
       <main class="page-content" aria-label="Content">
         <div class="wrapper">

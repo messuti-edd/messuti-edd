@@ -1,8 +1,9 @@
-.portfolio .portfolio_site_item {
-  .top_title {
-    position: relative;
-    margin-top: 15px;
+.top-header {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
 
+  .top_title {
     .pf_avatar {
       border-radius: 20px;
       border: 3px solid #dfdfdf;
@@ -18,6 +19,26 @@
     }
   }
 
+  .portfolio_header_menu {
+    flex: 1;
+    text-align: right;
+
+    a {
+      margin-left: 10px;
+    }
+    a.active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+}
+.container_wide {
+  .portfolio_header_menu {
+    margin-right: 20px;
+  }
+}
+
+.portfolio .portfolio_site_item {
   .item_title {
     position: relative;
 

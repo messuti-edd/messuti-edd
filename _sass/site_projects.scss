@@ -13,6 +13,30 @@
   }
 }
 
+.cols {
+  display: flex;
+
+  .left-col {
+    flex: 3;
+    margin-right: 20px;
+  }
+  .right-col {
+    flex: 9;
+  }
+}
+
+.label {
+  border: 1ps solid grey;
+  border-radius: 3px;
+  background: grey;
+  color: white;
+  display: inline-block;
+  padding: 2px 4px;
+  margin: 0 0px 2px 0;
+  font-size: .85em;
+  line-height: 1em;
+}
+
 .portfolio_projects {
   width: 800px;
   margin: 0 auto;

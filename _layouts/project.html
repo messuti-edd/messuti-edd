@@ -1,29 +1,32 @@
 ---
-layout: default
+layout: page
 ---
-<article class="project" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="project-header">
-    <h1 class="project-title" itemprop="name headline">{{ page.title | escape }}</h1>
-
-    <div class="project-content" itemprop="articleBody">
+<div class="cols">
+  <div class="left-col">
+    <div class="project_description">
       {{ content }}
     </div>
+    <div class="project_tags">
+      {% for tag in page.tags %}
+      <a href="/portfolio#tag={{ tag | escape }}" class="label label-default">{{ tag }}</a>
+      {% endfor %}
+    </div>
+    <br>
+    <a href="{{ url }}" class="btn btn-default go_to_site" target="_blank">Go to site 🔗</a>
+  </div>
 
+  <div class="right-col">
     <div class="project-images">
       <img src="{{ page.images | first }}" class="main-image">
       <div class="images-previews">
         {% for img in page.images %}
-          <a href="#"><img src="{{ img }}"></a>
+        <a href="#"><img src="{{ img }}"></a>
         {% endfor %}
       </div>
     </div>
-  </header>
-
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-  {% endif %}
-</article>
+  </div>
+</div>
 
 <script type="text/javascript">
   var mainImg, previews;
@@ -46,3 +49,7 @@ layout: default
     }
   }
 </script>
+
+{% if site.disqus.shortname %}
+  {% include disqus_comments.html %}
+{% endif %}

@@ -1,7 +1,15 @@
 ---
-title:  LasPelis.com
+title:  LasPelis Delivery
+url: http://laspelis.com
 images:
 - /assets/imgs/projects/laspelis_1.png
+- /assets/imgs/projects/laspelis_2.png
+tags:
+- Ruby on Rails
+- Javascript
+- Backbone.js
+- Heroku
+- PostgreSQL
 ---
 
-Yolo molo test projectOLO
+Founded and lead development of an online delivery service.

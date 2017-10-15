@@ -1,6 +1,6 @@
 ---
 title:  LasPelis Delivery
-url: http://laspelis.com
+link: http://laspelis.com
 images:
 - /assets/imgs/projects/laspelis_1.png
 - /assets/imgs/projects/laspelis_2.png

@@ -12,8 +12,10 @@ layout: page
       <a href="/portfolio#tag={{ tag | escape }}" class="label label-default">{{ tag }}</a>
       {% endfor %}
     </div>
-    <br>
-    <a href="{{ url }}" class="btn btn-default go_to_site" target="_blank">Go to site 🔗</a>
+    {% if page.link %}
+      <br>
+      <a href="{{ page.link }}" class="btn btn-default go_to_site" target="_blank">Go to site 🔗</a>
+    {% endif %}
   </div>
 
   <div class="right-col">

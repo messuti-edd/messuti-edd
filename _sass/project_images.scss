@@ -1,0 +1,33 @@
+.project-images {
+  text-align: center;
+
+  .main-image {
+    max-height: 500px;
+    max-width: 900px;
+    box-shadow: #a0a0a0 0px 0px 18px 0px;
+    margin-bottom: 30px;
+  }
+
+  .images-previews {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      margin: 5px;
+      border: 3px solid lightgrey;
+      display: flex;
+      align-items: center;
+
+      &.active {
+        border: 3px solid grey;
+        box-shadow: #a0a0a0 0px 0px 12px 0px;
+      }
+    }
+
+    img {
+      max-height: 150px;
+      max-width: 150px;
+    }
+  }
+}

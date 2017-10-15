@@ -20,8 +20,14 @@ layout: page
     <div class="project-images">
       <img src="{{ page.images | first }}" class="main-image">
       <div class="images-previews">
+        {% assign index = 0 %}
         {% for img in page.images %}
-        <a href="#"><img src="{{ img }}"></a>
+          {% assign className = "inactive" %}
+          {% if index == 0 %}
+            {% assign className = "active" %}
+          {% endif %}
+          <a href="#" class="{{ className }}"><img src="{{ img }}"></a>
+        {% assign index = index | plus: 1 %}
         {% endfor %}
       </div>
     </div>

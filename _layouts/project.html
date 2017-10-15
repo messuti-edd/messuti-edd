@@ -41,7 +41,7 @@ layout: page
 
   function onImgPreviewClick(evt) {
     evt.preventDefault();
-    mainImg.src = evt.target.src;
+    mainImg.src = evt.currentTarget.children[0].src;
     for (var i = 0; i < previews.length; i++) {
       previews[i].classList.remove('active');
     }

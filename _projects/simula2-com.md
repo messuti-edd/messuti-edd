@@ -1,5 +1,5 @@
 ---
-title:  Simula2.com
+title: Simula2.com
 images:
 - /assets/imgs/projects/simula2_1.jpg
 - /assets/imgs/projects/simula2_2.jpg
